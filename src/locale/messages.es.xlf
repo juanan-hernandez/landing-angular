@@ -1,0 +1,8 @@
+<trans-unit id="contactText" datatype="html">
+  <source>Do you have any question? </source>
+  <target>¿Tienes alguna pregunta? Por favor, no dudes en contactar conmigo directamente, trataré de responder lo antes posible.</target>
+  <context-group purpose="location">
+    <context context-type="sourcefile">app/contacto/contacto.component.html</context>
+    <context context-type="linenumber">7</context>
+  </context-group>
+</trans-unit>
