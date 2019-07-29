@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-home',
@@ -13,25 +12,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private  http:  HttpClient) {}
 
-  getExperiences() {
-    return this.http.get(`${environment.API_endpoint}/api/experiences/`).subscribe((res) => {
-      this.experiences = res;
-      });
-  }
-
-  getMonthAndYear(dateString) {
-    if (dateString === null) {
-      return 'presente';
-    } else {
-      const date = new Date(dateString);
-      const month = date.toLocaleString('es-es', {month: 'long'});
-      const year = date.getFullYear();
-      return month + '-' + year;
-    }
-  }
-
   ngOnInit() {
-    this.getExperiences();
   }
 
 }
