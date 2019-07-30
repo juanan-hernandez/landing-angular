@@ -69,8 +69,8 @@ sudo rm default //removes default directory
 cd /var/www
 git clone https://github.com/juanan-hernandez/landing-angular.git
 cd /var/www/landing-angular
-npm install
-npm update
+sudo npm install --unsafe-perms 
+sudo npm update --unsafe-perms
 ng build --prod
 sudo npm update
 
